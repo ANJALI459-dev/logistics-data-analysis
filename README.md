@@ -1,42 +1,21 @@
-# Week 1 Logistics Analytics — Late Delivery Risk
+# Week 2 - Logistics Data Collection, Cleaning and Preprocessing
 
-## Project objective
-A strategic planning and data exploration project for logistics analytics. The project uses the public **DataCo SMART SUPPLY CHAIN FOR BIG DATA ANALYSIS** dataset to study delivery performance and design a leakage-aware late-delivery risk workflow.
+This repository contains the Week 2 internship submission.
 
-## Data source
-Constante, Fabian; Silva, Fernando; Pereira, António (2019), *DataCo SMART SUPPLY CHAIN FOR BIG DATA ANALYSIS*, Mendeley Data, Version 5, DOI: 10.17632/8gx2fvg2k6.5.
+## Contents
+- `Week2_Logistics_Data_Preprocessing_Report.docx` - submission report
+- `preprocess_logistics.py` - Python preprocessing pipeline
+- `logistics_sample_dirty.csv` - small illustrative dataset with deliberate quality issues
+- `requirements.txt` - Python dependencies
 
-Download the CSV from:
-https://data.mendeley.com/datasets/8gx2fvg2k6/5
+## Public reference dataset
+DataCo SMART SUPPLY CHAIN FOR BIG DATA ANALYSIS:
+https://www.kaggle.com/datasets/shashwatwork/dataco-smart-supply-chain-for-big-data-analysis
 
-## Workflow
-1. Data validation and grain check
-2. Missing-value and duplicate checks
-3. KPI calculation
-4. Exploratory analysis
-5. Leakage-aware feature engineering
-6. Logistic-regression baseline
-7. K-Means clustering illustration
-8. Constrained allocation optimization illustration
-9. Evaluation and documentation
-
-## Important leakage rule
-Do not use post-delivery variables such as actual shipping duration or delivery status as predictors of whether an order will be late. Those variables reveal the outcome.
+The sample CSV is included only so the preprocessing code can be demonstrated without distributing a large third-party dataset. For full-scale analysis, download the public DataCo dataset and adapt the input column names in the script.
 
 ## Run
 ```bash
 pip install -r requirements.txt
-python code/week1_logistics_analysis.py
+python preprocess_logistics.py
 ```
-
-Place the downloaded CSV at:
-`data/DataCoSupplyChainDataset.csv`
-
-## Files
-- `docs/Week1_Logistics_Strategic_Planning_Report.docx`
-- `code/week1_logistics_analysis.py`
-- `data/README.md`
-- `requirements.txt`
-
-## Limitations
-The Week 1 script is a planning/baseline implementation. It does not claim model performance until the public dataset is actually downloaded and processed. Optimization values in the example are illustrative and must be replaced with measured operational costs, risk estimates, demand, and capacities before real decision use.
